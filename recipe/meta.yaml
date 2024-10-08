@@ -1,5 +1,5 @@
 {% set name = "blacken-docs" %}
-{% set version = "1.18.0" %}
+{% set version = "1.19.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: 47bed628679d008a8eb55d112df950582e68d0f57615223929e366348d935444
+  sha256: a95176ff28f8d1a2cb7781fed21dc008b08270732d94b1e7336c26115dd92c4a
 
 build:
   number: 0
