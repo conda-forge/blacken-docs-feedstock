@@ -15,16 +15,16 @@ build:
   noarch: python
   entry_points:
     - blacken-docs=blacken_docs:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.9
     - setuptools
   run:
-    - black >=19.3b0
-    - python >=3.6
+    - black >=22.1
+    - python >=3.9
 
 test:
   imports:
