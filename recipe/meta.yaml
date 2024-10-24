@@ -1,5 +1,5 @@
 {% set name = "blacken-docs" %}
-{% set version = "1.19.0" %}
+{% set version = "1.19.1" %}
 
 
 package:
@@ -8,22 +8,23 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: a95176ff28f8d1a2cb7781fed21dc008b08270732d94b1e7336c26115dd92c4a
+  sha256: 3cf7a10f5b87886683e3ab07a0dc17de41425f3d21e2948e59f1c6079c45b328
 
 build:
   number: 0
   noarch: python
   entry_points:
     - blacken-docs=blacken_docs:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.9
+    - setuptools
   run:
-    - black >=19.3b0
-    - python >=3.6
+    - black >=22.1
+    - python >=3.9
 
 test:
   imports:
