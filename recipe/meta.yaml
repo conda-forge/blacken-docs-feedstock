@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
   run:
     - black >=19.3b0
     - python >=3.6
